@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a6e6e;
+  padding: 15px 30px;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.banner {
+  background-color: #e0f2f1;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.banner h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #0a6e6e;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.about-preview, .emergency, .testimonials, .featured-doctors {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.doctor-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 200px;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  margin: 10px auto;
+  max-width: 500px;
+}
+
+.page-header {
+  background-color: #0a6e6e;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.intro, .services, .history {
+  padding: 30px;
+}
+
+.mission-vision {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.mission-vision .box {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 250px;
+}
+
+.services ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0a6e6e;
+  color: white;
+  margin-top: 20px;
+}
