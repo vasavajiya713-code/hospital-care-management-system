@@ -191,3 +191,10 @@ footer {
 .login-note a:hover {
   text-decoration: underline;
 }
+
+.login-error {
+  color: #c0392b;
+  font-size: 13px;
+  margin-top: 8px;
+  min-height: 16px;
+}
