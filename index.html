@@ -1,83 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>City Care Hospital</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CityCare Hospital - Hospital Care Management System">
+  <title>CityCare Hospital | Login</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-visual">
+      <div class="brand">
+        <div class="brand-mark">✚</div>
+        <div><strong>CityCare</strong><span>Hospital</span></div>
+      </div>
+      <div class="visual-copy">
+        <p class="eyebrow">COMPASSION • CARE • TRUST</p>
+        <h1>Healthcare that puts <em>you</em> first.</h1>
+        <p>Book appointments with trusted specialists and manage your hospital visits in one simple place.</p>
+        <div class="care-points">
+          <span>✓ Trusted specialists</span>
+          <span>✓ Easy appointment booking</span>
+          <span>✓ Patient-first care</span>
+        </div>
+      </div>
+      <div class="visual-note">Your health. Our priority.</div>
+    </section>
 
-<header class="navbar">
-  <div class="logo">City Care Hospital</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="#">Doctors</a></li>
-      <li><a href="#">Departments</a></li>
-      <li><a href="#">Appointment</a></li>
-      <li><a href="#">Contact</a></li>
-      <li id="authLink"><a href="login.html">Login</a></li>
-    </ul>
-  </nav>
-</header>
+    <section class="auth-card-wrap">
+      <div class="auth-card">
+        <div class="mobile-brand brand">
+          <div class="brand-mark">✚</div>
+          <div><strong>CityCare</strong><span>Hospital</span></div>
+        </div>
+        <div class="auth-heading">
+          <span class="mini-icon">♡</span>
+          <p class="eyebrow">PATIENT PORTAL</p>
+          <h2>Welcome back</h2>
+          <p>Sign in to continue to your healthcare dashboard.</p>
+        </div>
 
-<section class="banner">
-  <h1>Welcome to City Care Hospital</h1>
-  <p>Compassionate care, advanced treatment, trusted by families for years.</p>
-  <a href="#" class="btn">Book Appointment</a>
-</section>
+        <form id="loginForm" novalidate>
+          <label for="email">Email address</label>
+          <div class="input-wrap">
+            <span>✉</span>
+            <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+          <small class="field-error" id="emailError"></small>
 
-<section class="about-preview">
-  <h2>About Our Hospital</h2>
-  <p>City Care Hospital has been serving the community with dedicated medical professionals, modern facilities, and a patient first approach to healthcare.</p>
-</section>
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span>⌑</span>
+            <input id="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+            <button type="button" class="icon-btn" id="togglePassword" aria-label="Show password">Show</button>
+          </div>
+          <small class="field-error" id="passwordError"></small>
 
-<section class="featured-doctors">
-  <h2>Featured Doctors</h2>
-  <div class="doctor-cards">
-    <div class="card">
-      <h3>Dr. Ananya Sharma</h3>
-      <p>Cardiologist</p>
-    </div>
-    <div class="card">
-      <h3>Dr. Rohan Mehta</h3>
-      <p>Neurologist</p>
-    </div>
-    <div class="card">
-      <h3>Dr. Priya Nair</h3>
-      <p>Pediatrician</p>
-    </div>
-  </div>
-</section>
+          <div class="form-row">
+            <label class="check"><input type="checkbox" id="remember"> <span>Remember me</span></label>
+            <a href="#" id="forgotLink">Forgot password?</a>
+          </div>
 
-<section class="emergency">
-  <h2>Emergency Contact</h2>
-  <p>Call us 24/7 at <strong>+91 99999 99999</strong></p>
-</section>
+          <button class="btn btn-primary btn-full" type="submit">Sign in <span>→</span></button>
+          <p class="demo-hint">Demo login: <b>patient@citycare.com</b> / <b>patient123</b></p>
+          <div class="login-status" id="loginStatus" role="status"></div>
+        </form>
 
-<section class="testimonials">
-  <h2>Patient Testimonials</h2>
-  <blockquote>"The doctors here treated me like family. Truly grateful." - Rakesh Kumar</blockquote>
-  <blockquote>"Clean, professional, and caring staff." - Sunita Verma</blockquote>
-</section>
-
-<footer>
-  <p>&copy; 2026 City Care Hospital. All rights reserved.</p>
-</footer>
-
-<script>
-  const authLink = document.getElementById("authLink");
-  if (localStorage.getItem("loggedIn") === "true") {
-    authLink.innerHTML = '<a href="#" id="logoutBtn">Logout</a>';
-    document.getElementById("logoutBtn").addEventListener("click", function(e) {
-      e.preventDefault();
-      localStorage.removeItem("loggedIn");
-      window.location.href = "login.html";
-    });
-  }
-</script>
-
+        <p class="auth-footer">Need help? <a href="contact.html">Contact CityCare</a></p>
+      </div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
 </body>
 </html>
