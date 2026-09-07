@@ -1,79 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - City Care Hospital</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>CityCare Hospital | About</title><link rel="stylesheet" href="css/style.css"></head>
 <body>
-
-<header class="navbar">
-  <div class="logo">City Care Hospital</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="#">Doctors</a></li>
-      <li><a href="#">Departments</a></li>
-      <li><a href="#">Appointment</a></li>
-      <li><a href="#">Contact</a></li>
-      <li id="authLink"><a href="login.html">Login</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="page-header">
-  <h1>About Us</h1>
-</section>
-
-<section class="intro">
-  <h2>Hospital Introduction</h2>
-  <p>City Care Hospital was established with a vision to provide affordable, high quality healthcare to every family in the region. Over the years, we have grown into a multi specialty hospital equipped with modern technology and a team of skilled doctors.</p>
-</section>
-
-<section class="mission-vision">
-  <div class="box">
-    <h3>Our Mission</h3>
-    <p>To deliver compassionate, timely, and effective medical care to every patient who walks through our doors.</p>
-  </div>
-  <div class="box">
-    <h3>Our Vision</h3>
-    <p>To be the most trusted healthcare provider in the region, known for excellence and integrity.</p>
-  </div>
-</section>
-
-<section class="services">
-  <h2>Our Services</h2>
-  <ul>
-    <li>24/7 Emergency Care</li>
-    <li>Advanced Diagnostic Labs</li>
-    <li>Specialist Consultations</li>
-    <li>In Patient and Out Patient Services</li>
-    <li>Ambulance Services</li>
-  </ul>
-</section>
-
-<section class="history">
-  <h2>Hospital History</h2>
-  <p>Founded in 1998, City Care Hospital began as a small clinic and has since expanded into a full fledged hospital serving thousands of patients every year.</p>
-</section>
-
-<footer>
-  <p>&copy; 2026 City Care Hospital. All rights reserved.</p>
-</footer>
-
-<script>
-  const authLink = document.getElementById("authLink");
-  if (localStorage.getItem("loggedIn") === "true") {
-    authLink.innerHTML = '<a href="#" id="logoutBtn">Logout</a>';
-    document.getElementById("logoutBtn").addEventListener("click", function(e) {
-      e.preventDefault();
-      localStorage.removeItem("loggedIn");
-      window.location.href = "login.html";
-    });
-  }
-</script>
-
-</body>
-</html>
+<header class="site-header"><a class="brand" href="home.html"><div class="brand-mark">✚</div><div><strong>CityCare</strong><span>Hospital</span></div></a><button class="menu-toggle">☰</button><nav class="main-nav"><a href="home.html">Home</a><a class="active" href="about.html">About</a><a href="doctors.html">Doctors</a><a href="departments.html">Departments</a><a href="appointment.html">Appointments</a><a href="contact.html">Contact</a><a class="nav-login" href="index.html">Sign out</a></nav></header>
+<main>
+<section class="page-hero"><p class="eyebrow">ABOUT CITYCARE</p><h1>Healthcare built around <span>people.</span></h1><p>We bring trusted specialists, modern facilities and a patient-first approach together under one roof.</p></section>
+<section class="section two-col"><div><p class="eyebrow">OUR STORY</p><h2>Here for your health, every step of the way.</h2><p>CityCare Hospital is a patient-focused healthcare centre created to make quality medical care easier to access. From routine consultations to specialist care, our teams work together to make every visit clear, comfortable and respectful.</p><p>Our hospital combines experienced clinicians with thoughtful service so patients and families can focus on what matters most: getting well.</p></div><div class="about-stats"><div><b>25+</b><span>Specialists</span></div><div><b>10k+</b><span>Patients</span></div><div><b>15</b><span>Years of care</span></div><div><b>24/7</b><span>Emergency support</span></div></div></section>
+<section class="section values"><div class="section-heading"><div><p class="eyebrow">WHAT GUIDES US</p><h2>Our mission & vision</h2></div></div><div class="value-grid"><article><span>01</span><h3>Mission</h3><p>To provide accessible, compassionate and reliable healthcare while treating every patient with dignity.</p></article><article><span>02</span><h3>Vision</h3><p>To create a healthier community where quality medical care is simple to find and easy to navigate.</p></article><article><span>03</span><h3>Our promise</h3><p>Clear communication, respectful care and a smoother experience from appointment to recovery.</p></article></div></section>
+<section class="section service-strip"><p class="eyebrow">OUR SERVICES</p><div class="service-list"><span>Outpatient consultations</span><span>Diagnostic support</span><span>Specialist care</span><span>Emergency services</span><span>Preventive healthcare</span></div></section>
+</main><footer class="site-footer"><div><a class="brand" href="home.html"><div class="brand-mark">✚</div><div><strong>CityCare</strong><span>Hospital</span></div></a><p>Compassionate healthcare, made easier.</p></div><div><b>Quick links</b><a href="home.html">Home</a><a href="doctors.html">Doctors</a><a href="appointment.html">Appointments</a></div><div><b>Contact</b><span>1800 123 456</span><span>care@citycare.com</span></div></footer><script src="js/script.js"></script></body></html>
