@@ -312,13 +312,16 @@ input:focus, select:focus, textarea:focus {
 .feedback-card { max-width: 800px; margin: 0 auto; }
 
 /* ---------- footer ---------- */
-.site-footer { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 30px; padding: 50px 5%; margin-top: 40px; background: var(--navy); color: var(--white); }
+.site-footer { margin-top: 40px; padding: 50px 5% 0; background: var(--navy); color: var(--white); }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.3fr; gap: 30px; max-width: 1200px; margin: 0 auto; padding-bottom: 36px; }
 .site-footer .brand strong { color: var(--white); }
 .site-footer .brand span { color: #9fc0cc; }
-.site-footer p { color: #b8cad6; margin-top: 12px; }
-.site-footer b { display: block; margin-bottom: 12px; color: var(--white); }
-.site-footer a:not(.brand), .site-footer > div > span { display: block; color: #b8cad6; margin-bottom: 6px; font-size: 0.95rem; letter-spacing: 0; text-transform: none; }
-.site-footer a:not(.brand):hover { color: var(--white); }
+.site-footer p { color: #b8cad6; margin-top: 14px; font-size: 0.95rem; max-width: 320px; }
+.site-footer b { display: block; margin-bottom: 14px; color: var(--white); }
+.footer-grid a:not(.brand), .footer-grid > div > span { display: block; color: #b8cad6; margin-bottom: 8px; font-size: 0.95rem; letter-spacing: 0; text-transform: none; }
+.footer-grid a:not(.brand):hover { color: var(--white); text-decoration: underline; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; padding: 18px 0; border-top: 1px solid rgba(255, 255, 255, 0.15); }
+.footer-bottom span { color: #9fc0cc; font-size: 0.85rem; }
 
 /* ---------- login page ---------- */
 .auth-page { background: var(--white); }
@@ -362,7 +365,7 @@ input:focus, select:focus, textarea:focus {
   .hero { padding: 40px 5%; }
   .hero h1 { font-size: 2.3rem; }
   .hero-art { height: 340px; }
-  .site-footer { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
 
   .auth-shell { grid-template-columns: 1fr; }
   .auth-visual { display: none; }
@@ -375,4 +378,5 @@ input:focus, select:focus, textarea:focus {
   .section { padding: 40px 16px; }
   .booking-card, .card, .auth-card { padding: 22px; }
   .emergency-banner { padding: 24px; }
+  .footer-grid { grid-template-columns: 1fr; }
 }
