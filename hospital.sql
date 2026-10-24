@@ -2,8 +2,15 @@
 -- The live GitHub Pages demo uses Local Storage because GitHub Pages
 -- cannot run PHP/MySQL. This schema is ready for backend integration.
 
-CREATE DATABASE citycare_hospital;
+CREATE DATABASE IF NOT EXISTS citycare_hospital;
 USE citycare_hospital;
+
+CREATE TABLE users (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role VARCHAR(20) DEFAULT 'patient'
+);
 
 CREATE TABLE departments (
   department_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -40,6 +47,7 @@ CREATE TABLE appointments (
   appointment_time VARCHAR(30) NOT NULL,
   reason TEXT,
   booking_status VARCHAR(30) DEFAULT 'Confirmed',
+  UNIQUE (doctor_id, appointment_date, appointment_time),
   FOREIGN KEY (patient_id) REFERENCES patients(patient_id),
   FOREIGN KEY (doctor_id) REFERENCES doctors(doctor_id),
   FOREIGN KEY (department_id) REFERENCES departments(department_id)
@@ -61,3 +69,15 @@ INSERT INTO departments (department_name, description) VALUES
 ('Pediatrics','Healthcare for children'),
 ('Dermatology','Skin, hair and nail care'),
 ('General Medicine','Primary and routine medical care');
+
+INSERT INTO doctors (doctor_name, department_id, qualification, experience_years, consultation_timings) VALUES
+('Dr. Aarav Mehta', 1, 'MBBS, MD', 12, 'Mon-Fri 10:00 AM-2:00 PM'),
+('Dr. Meera Kapoor', 2, 'MBBS, DM', 10, 'Mon-Sat 11:00 AM-3:00 PM'),
+('Dr. Rohan Shah', 3, 'MBBS, MS', 14, 'Tue-Sat 9:00 AM-1:00 PM'),
+('Dr. Ishita Rao', 4, 'MBBS, DCH', 9, 'Mon-Fri 4:00 PM-7:00 PM'),
+('Dr. Nisha Patel', 5, 'MBBS, MD', 8, 'Mon-Sat 10:00 AM-1:00 PM'),
+('Dr. Kabir Joshi', 6, 'MBBS, MD', 11, 'Mon-Sat 8:30 AM-12:30 PM');
+
+-- demo login only. In a real PHP project store a hashed password (password_hash).
+INSERT INTO users (email, password, role) VALUES
+('patient@citycare.com', 'patient123', 'patient');
